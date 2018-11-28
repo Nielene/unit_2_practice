@@ -29,33 +29,41 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("url",url);
     }
 
+
     axios
-    .get(api[0].url)
+    .get(url)
     .then(res => {
       posts = res.data[0];
+      console.log( "res.data",res);
       // debugger
       // postsTitle = res.data[0].title;
       // postsBody = res.data[0].body;
+      postsData();
 
-      let data = document.querySelector(".data");
-      let div = document.createElement("div");
-      div.classList.add("data");
 
-      // let p = document.createElement("p");
-
-      posts.forEach(title => {
-        let h3 = document.createElement("h3");
-        h3.innerText = res.data[0].title;
-        div.appendChild(h3);
-      });
-
-      document.body.replaceChild(div, data);
-      // div.appendChild(p);
-
-      console.log("posts", posts, postsTitle, postsBody);
-      debugger;
     });
   }
+
+  function postsData() {
+    let data = document.querySelector(".data");
+    let div = document.createElement("div");
+    div.classList.add("data");
+
+    // let p = document.createElement("p");
+    posts.forEach(title => {
+      let h3 = document.createElement("h3");
+      h3.innerText = res.data[0].title;
+      div.appendChild(h3);
+    });
+
+    document.body.replaceChild(div, data);
+    // div.appendChild(p);
+
+    console.log("posts", posts, postsTitle, postsBody);
+    debugger;
+  }
+
+
 
   // function updateInfoPosts() {
   //   axios
