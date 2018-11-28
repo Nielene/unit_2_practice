@@ -10,13 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   ]
 
 
-
   let posts;
   let select = document.querySelector("select");
 
   updateInfoPosts()
 
-  // select.addEventListener("change", updateInfo)
+  select.addEventListener("change", updateInfo)
+
+  function updateInfo() {
+    let option = querySelector("option")
+    axios
+    .get(api[0].url)
+  }
+
+
 
   function updateInfoPosts() {
     axios
@@ -31,7 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
 
-  // function
 
 
 
