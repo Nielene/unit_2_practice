@@ -33,9 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
     axios
     .get(url)
     .then(res => {
+      debugger
+
+      res
+{data: Array(200), status: 200, statusText: "", headers: {…}, config: {…}, …}
+
+
       posts = res.data[0];
       console.log( "res.data",res);
-      // debugger
+      debugger
       // postsTitle = res.data[0].title;
       // postsBody = res.data[0].body;
       postsData();

@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         })
         .then(data => {
+          // console.log(data);
           let title;
           let body;
 
