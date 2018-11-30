@@ -28,15 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
       url = api[i].url
       console.log("url",url);
     }
-
+//IF STATEMENTS INSTEAD!
 
     axios
     .get(url)
     .then(res => {
       debugger
 
-      res
-{data: Array(200), status: 200, statusText: "", headers: {…}, config: {…}, …}
+//       res
+// {data: Array(200), status: 200, statusText: "", headers: {…}, config: {…}, …}
 
 
       posts = res.data[0];
